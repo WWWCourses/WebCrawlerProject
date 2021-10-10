@@ -1,0 +1,16 @@
+# ignore all dot files
+**/.*
+
+# except
+!.gitmodules
+!.gitignore
+!.editorconfig
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+#other
+nohup.out
+*.ipynb_checkpoints
