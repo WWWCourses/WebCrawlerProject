@@ -35,10 +35,5 @@ class Crawler:
 
 
 
-
-
-
-
-
-seed = ['https://www.autokelly.bg']
+seed = ['https://www.autokelly.bg/bg/products/43758570.html?ids=39849642;51224611']
 crawler = Crawler(seed)

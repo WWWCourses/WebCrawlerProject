@@ -39,6 +39,8 @@ def make_post_request(url, login_data):
 # url="https://www.abv.bg"
 url = "https://www.autokelly.bg"
 
+
+# TODO: use python configparser or ENV variables to store sensitive data
 login_data = {
 	"username":"test2testtest2test",
 	"password":"test1234"
