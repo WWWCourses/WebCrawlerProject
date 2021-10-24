@@ -28,22 +28,18 @@ class Crawler:
 			if href and href.startswith('/'):
 				self.urls_to_visit.append(urljoin(url, href))
 
-	def crawl(self, url, level=1):
-		logging.info(f"Crawling: {url}")
-		self.extract_links_to_visit(url)
-		self.urls_visited.append(url)
-
 	def log_visited_urls(self, filename):
 		with open(filename, 'w') as f:
 			f.writelines('\n'.join(self.urls_visited))
 
-	def run(self):
+	def run(self,url):
 		url = self.urls_to_visit.pop(0)
 		while self.urls_to_visit:
 			url = self.urls_to_visit.pop()
 			if url not in self.urls_visited:
+				logging.info(f"Crawling: {url}")
 				self.urls_visited.append(url)
-				self.crawl(url)
+				self.extract_links_to_visit(url)
 
 
 if __name__ == '__main__':
