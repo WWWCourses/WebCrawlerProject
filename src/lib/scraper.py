@@ -11,6 +11,9 @@ class Scraper:
 	def scrape_links_to_text(self):
 		for link in self.links:
 			r = re.compile(r'.+?>([^<]+)')
+			res = r.search(link)
+			print(res.group(1))
+
 			# TODO: why filter object
 			# filtered_links = list(filter(r.search, self.links))
 
